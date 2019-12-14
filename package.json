@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./proxy/",
-    "build": "webpack -d -w"
+    "start": "node ./proxy/",
+    "build": "webpack -mode=production",
+    "build:dev": "webpack -d -w"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-proxy-middleware": "^0.20.0",
-    "nodemon": "^2.0.1",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
-  }
+    "nodemon": "^2.0.1"
+  },
+  "dependencies": {}
 }
