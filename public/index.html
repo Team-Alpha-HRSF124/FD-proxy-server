@@ -18,16 +18,17 @@
     }
 
     .intropics {
-      width: 90%;
+      width: 660px;
       margin-left: auto;
     }
     
     .section-title {
-      grid-area: section-title;
+      display: block;
       margin: 2px;
-      margin-left: 90px;
+      margin-left: 50px;
       font-family: 'Montserrat';
-      font-size: 200%;
+      font-size: 150%;
+      font-weight: 1000;
     }
 
     .hr {
@@ -46,10 +47,9 @@
 
     #reservations {
       grid-area: reservations;
-      height: 200px;
-      position: -webkit-sticky; /* Safari */
-      position: sticky;
       top: 0;
+      position: sticky;
+      margin-right: auto;
     }
 
     #reviews {
@@ -59,7 +59,6 @@
 
     #related-suggestions {
       margin: auto;
-      grid-area: related-suggestions; 
     }
 
     .nav {
@@ -74,19 +73,34 @@
       padding: 2px;
     }
 
+    .bottom {
+      grid-area: bottom;
+      width: min-content;
+      margin: auto;
+    }
+
+    .related-activities {
+      margin: auto;
+      grid-area: ra;
+    }
+
+    .related-activities-picture {
+      margin: auto;
+    }
+
     .main-container {
       width: 100%;
       position: relative;
       display: grid;
-      grid-template-columns: 15% 45% 25% 15%;
+      grid-template-columns: auto min-content min-content auto;
       grid-template-rows: auto;
       grid-template-areas:
         "nav nav nav nav"
         "gallery gallery gallery gallery"
         ". intro reservations ."
         ". reviews . ."
-        ". section-title . ."
-        "related-suggestions related-suggestions related-suggestions related-suggestions";
+        ". bottom bottom ."
+        "ra ra ra ra";
       grid-gap: 10px;
     }
   </style>
@@ -108,8 +122,13 @@
     <div id="gallery"></div>
     <div id="reservations"></div>
     <div id="reviews"></div>
-    <h1 class="section-title">More homes you may like</h1>
-    <div id="related-suggestions"></div>
+    <div class="bottom">
+      <h1 class="section-title">More homes you may like</h1>
+      <div id="related-suggestions"></div>
+    </div>
+    <div class="related-activities">
+      <img class="related-activities-picture" src="https://fecservices2.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-14+at+10.25.29+PM.png">
+    </div>
   </div>
 </body>
 <script src="https://fecservices2.s3-us-west-1.amazonaws.com/app.bundle.js"></script>
